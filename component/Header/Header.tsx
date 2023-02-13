@@ -14,7 +14,7 @@ export default function Header() {
         </List>
         <div>
           <Image
-            src={"/img/search.svg"}
+            src={"/icon/search.svg"}
             width={32}
             height={32}
             alt="search"
@@ -22,7 +22,7 @@ export default function Header() {
             style={{ margin: "0 10px" }}
           />
           <Image
-            src={"/img/transefer.svg"}
+            src={"/icon/transefer.svg"}
             width={32}
             height={32}
             alt="transefer"
@@ -30,7 +30,7 @@ export default function Header() {
             style={{ margin: "0 10px" }}
           />
           <Image
-            src={"/img/moon.svg"}
+            src={"/icon/moon.svg"}
             width={32}
             height={32}
             alt="moon"
@@ -63,7 +63,9 @@ const Nav = styled.div`
 
 const List = styled.div`
   display: flex;
-  gap: 24px;
   font-size: 16px;
   font-weight: 400;
+  & div {
+    padding: 0 28px;
+  }
 `;

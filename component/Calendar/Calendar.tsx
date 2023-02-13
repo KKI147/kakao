@@ -1,25 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { getDateByString } from "@/module/date";
 export default function Calendar() {
-  // const today = new Date();
-  // const newDay = today.toISOString().split("T")[0].split("-");
-  // const month = newDay[1];
-  // const date = newDay[2];
-  const today = new Intl.DateTimeFormat("kr").format(new Date());
-  const month = today.split(".")[1];
-  const date = today.split(".")[2];
-  const day = new Date();
-
-  const weekday = new Array(7);
-  weekday[0] = "일";
-  weekday[1] = "월";
-  weekday[2] = "화";
-  weekday[3] = "수";
-  weekday[4] = "목";
-  weekday[5] = "금";
-  weekday[6] = "토";
-  const week = weekday[day.getDay()];
-
   return (
     <Box>
       <Title>
@@ -33,7 +15,8 @@ export default function Calendar() {
         <Content>오늘의 카카오</Content>
       </Title>
       <Content>
-        {month}월{date}일 {week}요일 소식입니다
+        {getDateByString("month")}월{getDateByString("date")}일
+        {getDateByString("week")}요일 소식입니다
       </Content>
     </Box>
   );
