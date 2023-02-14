@@ -24,10 +24,10 @@ export default function BottomLeftCard() {
         <CardLayout>
           <TitleBox>
             <Image
-              src={"/icon/hand.png"}
+              src={"/icon/call.png"}
               width={36}
               height={36}
-              alt="data"
+              alt="image"
               loading="lazy"
               style={{
                 marginRight: "8px",
@@ -40,7 +40,7 @@ export default function BottomLeftCard() {
                 src={"/icon/more.svg"}
                 width={20}
                 height={20}
-                alt="more"
+                alt="image"
                 loading="lazy"
                 style={{ filter: "invert(80%)" }}
               />
@@ -78,7 +78,7 @@ export default function BottomLeftCard() {
                 src={"/icon/more.svg"}
                 width={20}
                 height={20}
-                alt="more"
+                alt="image"
                 loading="lazy"
                 style={{ filter: "invert(80%)" }}
               />
@@ -94,7 +94,7 @@ export default function BottomLeftCard() {
         </CardLayout>
         <ImgBox>
           <Image
-            src={"/img/background3.webp"}
+            src={"/img/background4.webp"}
             width={200}
             height={250}
             alt="background2"
@@ -132,7 +132,7 @@ export default function BottomLeftCard() {
                 src={"/icon/more.svg"}
                 width={20}
                 height={20}
-                alt="more"
+                alt="image"
                 loading="lazy"
                 style={{ filter: "invert(80%)" }}
               />
@@ -148,7 +148,7 @@ export default function BottomLeftCard() {
         </CardLayout>
         <ImgBox>
           <Image
-            src={"/img/background3.webp"}
+            src={"/img/background4.webp"}
             width={200}
             height={250}
             alt="background2"
@@ -169,10 +169,10 @@ export default function BottomLeftCard() {
         <CardLayout>
           <TitleBox>
             <Image
-              src={"/icon/hand.png"}
+              src={"/icon/secret.png"}
               width={36}
               height={36}
-              alt="data"
+              alt="image"
               loading="lazy"
               style={{
                 marginRight: "8px",
@@ -185,7 +185,7 @@ export default function BottomLeftCard() {
                 src={"/icon/more.svg"}
                 width={20}
                 height={20}
-                alt="more"
+                alt="image"
                 loading="lazy"
                 style={{ filter: "invert(80%)" }}
               />

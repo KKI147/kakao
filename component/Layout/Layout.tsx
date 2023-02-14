@@ -8,6 +8,8 @@ import Navbar from "../Navbar/Navbar";
 import BottomAside from "../Article/BottomArticle/BottomAside";
 import BottomSection from "../Article/BottomArticle/BottomSection";
 import Bottom from "../Bottom/Bottom";
+import MoreButton from "../MoreButton/MoreButton";
+import Footer from "../Footer/Footer";
 
 type LayoutProps = {
   children: ReactNode;
@@ -15,20 +17,24 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <Wrapper>
-      <Calendar />
-      <SectionBox>
-        <TopSection />
-        <TopAside />
-      </SectionBox>
-      <Middle />
-      <Navbar />
-      <SectionBox>
-        <BottomAside />
-        <BottomSection />
-      </SectionBox>
-      <Bottom />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Calendar />
+        <SectionBox>
+          <TopSection />
+          <TopAside />
+        </SectionBox>
+        <Middle />
+        <Navbar />
+        <SectionBox>
+          <BottomAside />
+          <BottomSection />
+        </SectionBox>
+        <Bottom />
+        <MoreButton />
+      </Wrapper>
+      <Footer />
+    </>
   );
 }
 

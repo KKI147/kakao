@@ -2,24 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export default function Navbar() {
-  // const onClickHandle = (url: string) => {
-  //   if (url === "kakao") {
-  //     return window.open("https://pf.kakao.com/_ZRQBh");
-  //   } else if (url === "yutube") {
-  //     return window.open("https://www.youtube.com/@Kakaobrandmedia");
-  //   } else if (url === "instar") {
-  //     return window.open("https://www.instagram.com/kakao.today/");
-  //   } else if (url === "face") {
-  //     return window.open("https://www.facebook.com/kakao.brandmedia");
-  //   } else if (url === "linked") {
-  //     return window.open("https://www.linkedin.com/company/kakaocorp");
-  //   } else {
-  //     return "bad request";
-  //   }
-  // };
-  const onClickHandle = (url: string) => {
-    return window.open(url);
-  };
   return (
     <Layout>
       <Text>카카오의 다양한 소식을 구독해보세요.</Text>
@@ -39,10 +21,10 @@ export default function Navbar() {
           onClick={() => window.open("https://pf.kakao.com/_ZRQBh")}
         />
         <Image
-          src={"/icon/yutube.svg"}
+          src={"/icon/youtube.svg"}
           width={64}
           height={64}
-          alt="yutube"
+          alt="youtube"
           loading="lazy"
           style={{
             marginRight: "8px",
@@ -50,7 +32,9 @@ export default function Navbar() {
             width: "60px",
             height: "60px",
           }}
-          onClick={() => onClickHandle("yutube")}
+          onClick={() =>
+            window.open("https://www.youtube.com/@Kakaobrandmedia")
+          }
         />
         <Image
           src={"/icon/instar.svg"}
@@ -64,7 +48,7 @@ export default function Navbar() {
             width: "60px",
             height: "60px",
           }}
-          onClick={() => onClickHandle("instar")}
+          onClick={() => window.open("https://www.instagram.com/kakao.today/")}
         />
 
         <Image
@@ -79,7 +63,9 @@ export default function Navbar() {
             width: "60px",
             height: "60px",
           }}
-          onClick={() => onClickHandle("face")}
+          onClick={() =>
+            window.open("https://www.facebook.com/kakao.brandmedia")
+          }
         />
 
         <Image
@@ -94,7 +80,9 @@ export default function Navbar() {
             width: "60px",
             height: "60px",
           }}
-          onClick={() => onClickHandle("linked")}
+          onClick={() =>
+            window.open("https://www.linkedin.com/company/kakaocorp")
+          }
         />
       </ImgBox>
     </Layout>

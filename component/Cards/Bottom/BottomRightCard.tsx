@@ -171,7 +171,7 @@ export default function BottomRightCard() {
         </CardLayout>
         <ImgBox>
           <Image
-            src={"/img/background2.webp"}
+            src={"/img/background4.webp"}
             width={200}
             height={250}
             alt="background2"

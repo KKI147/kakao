@@ -1,18 +1,27 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Modal from "../../Modal/Modal";
+import Portal from "@/component/Portal/Portal";
 import { useState } from "react";
 import { getDateByString } from "@/module/date";
+import Modal from "@/component/Modal/Modal";
 
 export default function Section() {
   const [modal, setModal] = useState<boolean>(false);
   const openModal = () => {
     setModal(!modal);
   };
+
   return (
     <>
       <Wrapper>
         <Box>
+          {modal ? (
+            <Portal selector={"portal"}>
+              <Modal close={openModal} />
+            </Portal>
+          ) : (
+            ""
+          )}
           <Title>
             <Image
               src={"/img/data.webp"}
@@ -25,6 +34,7 @@ export default function Section() {
                 verticalAlign: "top",
               }}
             />
+
             <Text>보도자료</Text>
             <Dot></Dot>
             <Day>{getDateByString("newday")}</Day>
@@ -48,7 +58,7 @@ export default function Section() {
               #카카오톡선물하기 #밸런타인데이 #커머스 #카카오커머스 #프로모션
             </ContentTag>
           </ContentBox>
-          <Test>
+          <ImgBox>
             <Image
               src={"/img/kakao.webp"}
               width={1000}
@@ -59,14 +69,14 @@ export default function Section() {
                 width: "100%",
               }}
             />
-          </Test>
+          </ImgBox>
         </Box>
       </Wrapper>
     </>
   );
 }
 
-const Test = styled.div`
+const ImgBox = styled.div`
   position: relative;
 `;
 
@@ -131,20 +141,6 @@ const Btn = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-`;
-
-const Cutom = styled.div`
-  position: absolute;
-  z-index: 30;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 12px;
-  /* width: 50%;
-  height: 100vh; */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 `;
 
 const ContentBox = styled.div`

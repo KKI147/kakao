@@ -29,6 +29,11 @@ const Wrapper = styled.div`
   padding: 96px 0 0;
   position: relative;
   gap: 25px;
+  height: 100vh;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 // ${({ variant }: CssType) => {

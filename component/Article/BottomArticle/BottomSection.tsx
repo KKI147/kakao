@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Modal from "../../Modal/Modal";
+import Modal from "../../Portal/Portal";
 import { useState } from "react";
 import { getDateByString } from "@/module/date";
 
@@ -49,7 +49,7 @@ export default function Section() {
             </ContentTag>
           </ContentBox>
           <Image
-            src={"/img/kakao.webp"}
+            src={"/img/background4.webp"}
             width={400}
             height={800}
             alt="kakao"
