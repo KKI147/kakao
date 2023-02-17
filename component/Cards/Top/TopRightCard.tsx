@@ -17,8 +17,18 @@ import {
 } from "./Card";
 import Image from "next/image";
 import { getDateByString } from "@/module/date";
+import { useState } from "react";
+import Portal from "@/component/Portal/Portal";
+import Modal from "@/component/Modal/Modal";
 
 export default function TopRightCard() {
+  const [project, setProject]: any = useState();
+  const [modal, setModal] = useState<boolean>(false);
+  const openModal = (value: string) => {
+    setProject(value);
+    setModal(!modal);
+  };
+
   return (
     <Layout>
       {/* 주가정보 */}
@@ -67,7 +77,11 @@ export default function TopRightCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal("카카오, 카카오 테크 캠퍼스로 지역 개발자 양...")
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -122,7 +136,9 @@ export default function TopRightCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() => openModal("카카오, SM엔터테인먼트 지분 9.05%확보")}
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -160,6 +176,13 @@ export default function TopRightCard() {
           />
         </ImgBox>
       </Card>
+      {modal ? (
+        <Portal selector={"portal"}>
+          <Modal close={openModal} title={project} />
+        </Portal>
+      ) : (
+        ""
+      )}
     </Layout>
   );
 }

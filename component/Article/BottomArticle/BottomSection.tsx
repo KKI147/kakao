@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Modal from "../../Portal/Portal";
+import Portal from "@/component/Portal/Portal";
+import Modal from "@/component/Modal/Modal";
 import { useState } from "react";
 import { getDateByString } from "@/module/date";
 
@@ -9,10 +10,21 @@ export default function Section() {
   const openModal = () => {
     setModal(!modal);
   };
+
   return (
     <>
       <Wrapper>
         <Box>
+          {modal ? (
+            <Portal selector={"portal"}>
+              <Modal
+                close={openModal}
+                title={"카카오엔터, 2323년 드라마 영화 30여편 기획 제작"}
+              />
+            </Portal>
+          ) : (
+            ""
+          )}
           <Title>
             <Image
               src={"/img/data.webp"}
@@ -48,38 +60,54 @@ export default function Section() {
               #카카오엔터테인먼트 #프리미엄콘텐츠 #글로벌스튜디오도약
             </ContentTag>
           </ContentBox>
-          <Image
-            src={"/img/background4.webp"}
-            width={400}
-            height={800}
-            alt="kakao"
-            loading="lazy"
-            style={{
-              width: "100%",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              position: "relative",
-            }}
-          />
+          <ImgBox>
+            <Image
+              src={"/img/background4.webp"}
+              width={1000}
+              height={450}
+              alt="image"
+              loading="lazy"
+              style={{
+                width: "100%",
+              }}
+            />
+          </ImgBox>
         </Box>
       </Wrapper>
     </>
   );
 }
-const Wrapper = styled.div`
-  /* margin: 0 18px; */
+const ImgBox = styled.div`
   position: relative;
+`;
 
-  width: 50%;
+const Wrapper = styled.div`
+  position: relative;
+  padding-top: 16px;
+  padding-right: 28px;
+  right: -28px;
+  width: calc(50% - 16px);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+  @media screen and (max-width: 1440px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 1024px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 16px);
+  }
 `;
 const Box = styled.div`
   padding: 25px 10px 10px 0;
-  margin: 0 -15px;
   position: relative;
   border-radius: 14px;
   background-color: #fff;
-  box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
+  box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
 `;
 
 const Title = styled.div`

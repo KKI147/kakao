@@ -13,8 +13,18 @@ import {
 } from "./Card";
 import Image from "next/image";
 import { getDateByString } from "@/module/date";
+import { useState } from "react";
+import Portal from "@/component/Portal/Portal";
+import Modal from "@/component/Modal/Modal";
 
 export default function TopLeftCard() {
+  const [project, setProject]: any = useState();
+  const [modal, setModal] = useState<boolean>(false);
+  const openModal = (value: string) => {
+    setProject(value);
+    setModal(!modal);
+  };
+
   return (
     <Layout>
       {/* It교육 */}
@@ -33,7 +43,11 @@ export default function TopLeftCard() {
               }}
             />
             <Text>IT교육</Text>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal("함께 배우며 성장하는 카카오 테크 캠퍼스")
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -88,7 +102,11 @@ export default function TopLeftCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal("카카오, 카카오톡 선물하기 밸런타인데이 프로모션...")
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -141,7 +159,11 @@ export default function TopLeftCard() {
               }}
             />
             <Text>약속과 책임</Text>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal("카카오는 당신과 함께 더 나은 세상을 만듭니다.")
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -177,7 +199,7 @@ export default function TopLeftCard() {
               }}
             />
             <Text>약속과 책임</Text>
-            <Btn>
+            <Btn onClick={() => openModal("ESG보고서, 카카오의 약속과 책임")}>
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -197,6 +219,13 @@ export default function TopLeftCard() {
           </ContentBox>
         </CardLayout>
       </Card>
+      {modal ? (
+        <Portal selector={"portal"}>
+          <Modal close={openModal} title={project} />
+        </Portal>
+      ) : (
+        ""
+      )}
     </Layout>
   );
 }

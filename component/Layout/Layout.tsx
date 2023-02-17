@@ -39,14 +39,30 @@ export default function Layout({ children }: LayoutProps) {
 }
 
 const Wrapper = styled.section`
-  width: calc(100% - 30%);
-  padding: 0 15%;
+  width: 1296px;
+  margin: 0 auto;
+  @media screen and (max-width: 1440px) {
+    width: 952px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 630px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 364px;
+  }
 `;
 
 const SectionBox = styled.div`
   display: flex;
   width: 100%;
-  gap: 50px;
   word-break: keep-all;
   word-wrap: break-word;
+  @media screen and (max-width: 1440px) {
+  }
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;

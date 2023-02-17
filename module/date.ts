@@ -4,7 +4,7 @@ const getDateByString = (args: string) => {
   const month = today.getMonth() + 1;
   const date = today.getDate();
   const weekend = ["일", "월", "화", "수", "목", "금", "토"];
-  const dayOfTheWeek = weekend[today.getDay() - 1];
+  const dayOfTheWeek = weekend[today.getDay()];
   const newday = new Date().toISOString().split("T")[0];
   const time = today.toString().split(" ")[4];
 
@@ -21,18 +21,6 @@ const getDateByString = (args: string) => {
   } else {
     return "Bad Request";
   }
-  // switch (args) {
-  //   case "month":
-  //     month;
-  //     break;
-  //   case "date":
-  //     date;
-  //     break;
-  //   case "week":
-  //     dayOfTheWeek;
-  //   default:
-  //     break;
-  // }
 };
 
 export { getDateByString };

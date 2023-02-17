@@ -38,8 +38,21 @@ export default function LeftSection() {
 
 const Layout = styled.div`
   display: inline-block;
-  width: 48%;
+  width: calc(50% - 10px);
+  margin-right: 10px;
   box-sizing: border-box;
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 `;
 
 const Box = styled.div`
@@ -49,7 +62,7 @@ const Box = styled.div`
   border-radius: 12px;
   box-sizing: border-box;
   background: no-repeat calc(100% - 40px) calc(100% - 40px);
-  box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
+  box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
   background-color: #fae100;
   background-image: url(/img/bg_service.png);
   background-size: 160px 160px;

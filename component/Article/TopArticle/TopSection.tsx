@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Portal from "@/component/Portal/Portal";
+import Modal from "@/component/Modal/Modal";
 import { useState } from "react";
 import { getDateByString } from "@/module/date";
-import Modal from "@/component/Modal/Modal";
 
 export default function Section() {
   const [modal, setModal] = useState<boolean>(false);
@@ -17,7 +17,10 @@ export default function Section() {
         <Box>
           {modal ? (
             <Portal selector={"portal"}>
-              <Modal close={openModal} />
+              <Modal
+                close={openModal}
+                title={"카카오, 카카오톡 선물하기 밸런타인데이"}
+              />
             </Portal>
           ) : (
             ""
@@ -34,7 +37,6 @@ export default function Section() {
                 verticalAlign: "top",
               }}
             />
-
             <Text>보도자료</Text>
             <Dot></Dot>
             <Day>{getDateByString("newday")}</Day>
@@ -63,7 +65,7 @@ export default function Section() {
               src={"/img/kakao.webp"}
               width={1000}
               height={450}
-              alt="kakao"
+              alt="image"
               loading="lazy"
               style={{
                 width: "100%",
@@ -81,18 +83,30 @@ const ImgBox = styled.div`
 `;
 
 const Wrapper = styled.div`
-  /* margin: 0 18px; */
   position: relative;
   padding: 96px 0 0;
-  width: 50%;
+  width: calc(50% - 16px);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+  @media screen and (max-width: 1440px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 1024px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 16px);
+  }
 `;
 const Box = styled.div`
   padding: 25px 10px 10px 0;
-  margin: 0 -15px;
   position: relative;
   border-radius: 14px;
   background-color: #fff;
-  box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
+  box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
 `;
 
 const Title = styled.div`
@@ -103,6 +117,18 @@ const Title = styled.div`
   padding-right: 20px;
   line-height: 1.5;
   font-size: 13px;
+  @media screen and (max-width: 1280px) {
+    line-height: 1;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    line-height: 0.8;
+    font-size: 10px;
+  }
+  @media screen and (max-width: 468px) {
+    line-height: 0.5;
+    font-size: 8px;
+  }
 `;
 
 const Text = styled.span`
@@ -158,4 +184,13 @@ const ContentTag = styled.div`
   margin: 20px 0;
   font-size: 14px;
   color: #666;
+  @media screen and (max-width: 1280px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 8px;
+  }
 `;

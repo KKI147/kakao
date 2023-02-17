@@ -23,31 +23,25 @@ export default function Aside() {
 }
 
 const Wrapper = styled.div`
+  width: 50%;
+  height: 700px;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  padding: 96px 0 0;
-  position: relative;
-  gap: 25px;
-  height: 100vh;
+  justify-content: space-between;
+  padding: 96px 28px 0 0;
+  right: -28px;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     display: none;
   }
+  @media screen and (max-width: 1440px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 1024px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 16px);
+  }
 `;
-
-// ${({ variant }: CssType) => {
-//   switch (variant) {
-//     case "image":
-//       return css`
-
-//       `;
-//     case "text":
-//       return css`
-
-//       `;
-// default:
-//       break;
-//   }
-// }}
-// `;

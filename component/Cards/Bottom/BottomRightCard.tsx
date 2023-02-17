@@ -17,8 +17,17 @@ import {
 } from "./Card";
 import Image from "next/image";
 import { getDateByString } from "@/module/date";
+import { useState } from "react";
+import Portal from "@/component/Portal/Portal";
+import Modal from "@/component/Modal/Modal";
 
 export default function BottomRightCard() {
+  const [project, setProject]: any = useState();
+  const [modal, setModal] = useState<boolean>(false);
+  const openModal = (value: string) => {
+    setProject(value);
+    setModal(!modal);
+  };
   return (
     <Layout>
       {/* 주가정보 */}
@@ -40,7 +49,13 @@ export default function BottomRightCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal(
+                  "카카오, (주)한화 건설부문과 손잡고 안산 포레나 도서..."
+                )
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -95,7 +110,13 @@ export default function BottomRightCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal(
+                  "카카오엔터, 웹툰&웹소설 창작자 대상 계약서 개정안..."
+                )
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -150,7 +171,11 @@ export default function BottomRightCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal("카카오, 카카오톡 쇼핑하기 요일별 테마딜 오픈...")
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -188,6 +213,13 @@ export default function BottomRightCard() {
           />
         </ImgBox>
       </Card>
+      {modal ? (
+        <Portal selector={"portal"}>
+          <Modal close={openModal} title={project} />
+        </Portal>
+      ) : (
+        ""
+      )}
     </Layout>
   );
 }

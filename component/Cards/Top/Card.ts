@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const Layout = styled.div`
-  width: 48%;
+  width: calc(50% - 16px);
+  padding-left: 6px;
 `;
 
 export const Card = styled.div`
@@ -12,8 +13,13 @@ export const Card = styled.div`
   box-sizing: border-box;
   border-radius: 14px;
   background-color: #fff;
-  box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
-  margin-bottom: 20px;
+  box-shadow: 4px 0 12px 2px rgb(0 0 0 / 9%);
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
 `;
 
 export const CardLayout = styled.div`

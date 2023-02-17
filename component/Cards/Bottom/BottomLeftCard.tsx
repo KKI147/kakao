@@ -16,8 +16,18 @@ import {
 } from "./Card";
 import Image from "next/image";
 import { getDateByString } from "@/module/date";
+import { useState } from "react";
+import Portal from "@/component/Portal/Portal";
+import Modal from "@/component/Modal/Modal";
 
 export default function BottomLeftCard() {
+  const [project, setProject]: any = useState();
+  const [modal, setModal] = useState<boolean>(false);
+  const openModal = (value: string) => {
+    setProject(value);
+    setModal(!modal);
+  };
+
   return (
     <Layout>
       <Card>
@@ -35,16 +45,6 @@ export default function BottomLeftCard() {
               }}
             />
             <Text>고객센터</Text>
-            <Btn>
-              <Image
-                src={"/icon/more.svg"}
-                width={20}
-                height={20}
-                alt="image"
-                loading="lazy"
-                style={{ filter: "invert(80%)" }}
-              />
-            </Btn>
           </TitleBox>
           <Service>어떤 서비스를 도와드릴까요?</Service>
           <TagBox>
@@ -73,7 +73,13 @@ export default function BottomLeftCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal(
+                  "카카오, 제주 오피스 사용 전력 재생에너지로 전환해..."
+                )
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -127,7 +133,13 @@ export default function BottomLeftCard() {
             />
             <Text>보도자료</Text>
             <Date>{getDateByString("newday")}</Date>
-            <Btn>
+            <Btn
+              onClick={() =>
+                openModal(
+                  "카카오, 제주 오피스 사용 전력 재생에너지로 전환해..."
+                )
+              }
+            >
               <Image
                 src={"/icon/more.svg"}
                 width={20}
@@ -180,16 +192,6 @@ export default function BottomLeftCard() {
               }}
             />
             <Text>카카오 프라이버시</Text>
-            <Btn>
-              <Image
-                src={"/icon/more.svg"}
-                width={20}
-                height={20}
-                alt="image"
-                loading="lazy"
-                style={{ filter: "invert(80%)" }}
-              />
-            </Btn>
           </TitleBox>
           <ContentBox variant="image">
             <ContentTitle variant="image">
@@ -200,6 +202,13 @@ export default function BottomLeftCard() {
           </ContentBox>
         </CardLayout>
       </Card>
+      {modal ? (
+        <Portal selector={"portal"}>
+          <Modal close={openModal} title={project} />
+        </Portal>
+      ) : (
+        ""
+      )}
       {/* 약속과책임 */}
     </Layout>
   );

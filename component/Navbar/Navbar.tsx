@@ -93,14 +93,29 @@ const Layout = styled.div`
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
+  width: 100%;
   height: 116px;
   padding: 28px 36px;
-  margin: 36px 18px;
+  margin: 36px 0;
   border-radius: 14px;
   background-color: #fff;
   text-align: center;
   box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
   box-sizing: border-box;
+  @media screen and (max-width: 1440px) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+  }
 `;
 
 const Text = styled.div`

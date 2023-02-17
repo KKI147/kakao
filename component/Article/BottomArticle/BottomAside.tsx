@@ -23,9 +23,24 @@ export default function Aside() {
 }
 
 const Wrapper = styled.div`
+  width: 50%;
+  height: 700px;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  position: relative;
-  gap: 25px;
+  justify-content: space-between;
+  padding-top: 16px;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (max-width: 1440px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 1024px) {
+    width: calc(50% - 16px);
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 16px);
+  }
 `;

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "kakao";
+  src: url("/font/KakaoRegular.ttf");
+}
+body {
+  font-family: "kakao";
+}

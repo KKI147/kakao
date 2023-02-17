@@ -13,9 +13,19 @@ export default function Bottom() {
 
 const BottomSection = styled.div`
   display: flex;
+  justify-content: space-between;
   margin-top: 36px;
   width: 100%;
-  gap: 50px;
   word-break: keep-all;
   word-wrap: break-word;
+  @media screen and (max-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+  @media screen and (max-width: 768px) {
+  }
 `;
