@@ -27,7 +27,7 @@ export default function Section() {
           )}
           <Title>
             <Image
-              src={"/img/data.webp"}
+              src={"/icon/data.webp"}
               width={36}
               height={36}
               alt="data"
