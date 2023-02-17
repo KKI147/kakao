@@ -35,6 +35,8 @@ export default function Section() {
               style={{
                 marginRight: "8px",
                 verticalAlign: "top",
+                width: "36px",
+                height: "36px",
               }}
             />
             <Text>보도자료</Text>
@@ -92,13 +94,13 @@ const Wrapper = styled.div`
     transform: translateY(-0.5rem);
   }
   @media screen and (max-width: 1440px) {
-    width: calc(50% - 16px);
+    width: 60%;
   }
   @media screen and (max-width: 1024px) {
-    width: calc(50% - 16px);
+    width: 70%;
   }
   @media screen and (max-width: 768px) {
-    width: calc(50% - 16px);
+    width: 100%;
   }
 `;
 const Box = styled.div`

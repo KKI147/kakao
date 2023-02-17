@@ -57,4 +57,10 @@ const UpBtn = styled.div`
   color: #fff;
   float: right;
   cursor: pointer;
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    top: 50%;
+    left: 45%;
+    float: none;
+  }
 `;

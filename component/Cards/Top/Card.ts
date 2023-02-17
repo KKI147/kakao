@@ -3,6 +3,16 @@ import styled, { css } from "styled-components";
 export const Layout = styled.div`
   width: calc(50% - 16px);
   padding-left: 6px;
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 47%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
 `;
 
 export const Card = styled.div`

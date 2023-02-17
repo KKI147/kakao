@@ -94,21 +94,21 @@ const List = styled.div`
     }
   }
   cursor: pointer;
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1440px) {
     font-size: 14px;
     & div {
       padding: 0 20px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       font-size: 12px;
       & div {
         padding: 0 12px;
       }
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       font-size: 10px;
       & div {
-        padding: 0 10px;
+        padding: 0 6px;
       }
     }
   }

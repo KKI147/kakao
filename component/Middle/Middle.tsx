@@ -60,12 +60,15 @@ const Layout = styled.div`
     height: 500px;
   }
   @media screen and (max-width: 1024px) {
-    height: 460px;
-    padding: 46px 66px 0;
+    width: 106%;
+    height: 400px;
+    padding: 36px 42px 0;
   }
   @media screen and (max-width: 768px) {
-    height: 340px;
-    padding: 46px 0 0;
+    width: 100%;
+    height: 320px;
+    padding: 35px 0 0;
+    margin: 0 0 30px 0;
   }
 `;
 
@@ -135,11 +138,11 @@ const ImageBox = styled.div`
     height: 35%;
   }
   @media screen and (max-width: 1024px) {
-    height: 40%;
+    height: 30%;
     margin: 40px auto;
   }
   @media screen and (max-width: 768px) {
-    height: 20%;
+    height: 30%;
     margin: 30px auto;
   }
 `;

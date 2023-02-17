@@ -58,11 +58,14 @@ const SectionBox = styled.div`
   word-break: keep-all;
   word-wrap: break-word;
   @media screen and (max-width: 1440px) {
+    width: 952px;
   }
   @media screen and (max-width: 1024px) {
     display: block;
   }
   @media screen and (max-width: 768px) {
     display: block;
+    position: relative;
+    width: 100%;
   }
 `;

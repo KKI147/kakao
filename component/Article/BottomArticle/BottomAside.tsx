@@ -35,12 +35,20 @@ const Wrapper = styled.div`
     display: none;
   }
   @media screen and (max-width: 1440px) {
-    width: calc(50% - 16px);
+    width: 40%;
+    display: block;
+    padding: 16px 35px 0 5px;
   }
   @media screen and (max-width: 1024px) {
-    width: calc(50% - 16px);
+    display: flex;
+    width: 70%;
+    padding: 30px 28px 0 0;
+    left: 0;
   }
   @media screen and (max-width: 768px) {
-    width: calc(50% - 16px);
+    width: 100%;
+    padding: 30px 20px 0 0;
+    height: auto;
+    overflow: visible;
   }
 `;

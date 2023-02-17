@@ -25,7 +25,9 @@ const BottomSection = styled.div`
   }
   @media screen and (max-width: 1024px) {
     display: block;
+    width: 106%;
   }
   @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;

@@ -83,7 +83,7 @@ const ImgBox = styled.div`
 
 const Wrapper = styled.div`
   position: relative;
-  padding-top: 16px;
+  padding: 16px 0;
   padding-right: 28px;
   right: -28px;
   width: calc(50% - 16px);
@@ -93,13 +93,16 @@ const Wrapper = styled.div`
     transform: translateY(-0.5rem);
   }
   @media screen and (max-width: 1440px) {
-    width: calc(50% - 16px);
+    width: 60%;
   }
   @media screen and (max-width: 1024px) {
-    width: calc(50% - 16px);
+    width: 70%;
+    right: 0;
+    margin-top: 30px;
   }
   @media screen and (max-width: 768px) {
-    width: calc(50% - 16px);
+    width: 100%;
+    margin-top: 0;
   }
 `;
 const Box = styled.div`
@@ -118,6 +121,18 @@ const Title = styled.div`
   padding-right: 20px;
   line-height: 1.5;
   font-size: 13px;
+  @media screen and (max-width: 1280px) {
+    line-height: 1;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    line-height: 0.8;
+    font-size: 10px;
+  }
+  @media screen and (max-width: 468px) {
+    line-height: 0.5;
+    font-size: 8px;
+  }
 `;
 
 const Text = styled.span`
@@ -158,20 +173,6 @@ const Btn = styled.button`
   cursor: pointer;
 `;
 
-const Cutom = styled.div`
-  position: absolute;
-  z-index: 30;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 12px;
-  /* width: 50%;
-  height: 100vh; */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`;
-
 const ContentBox = styled.div`
   margin-top: 15px;
   padding: 0 20px;
@@ -187,4 +188,13 @@ const ContentTag = styled.div`
   margin: 20px 0;
   font-size: 14px;
   color: #666;
+  @media screen and (max-width: 1280px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 8px;
+  }
 `;

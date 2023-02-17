@@ -78,18 +78,34 @@ const Layout = styled.div`
   background-color: #fff;
   border-top: 1px solid #ebebeb;
   margin-top: 200px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 100px;
+  }
 `;
 const Section = styled.div`
-  width: calc(100% - 30%);
-  padding: 0 15%;
+  width: 1296px;
+  margin: 0 auto;
+  @media screen and (max-width: 1440px) {
+    width: 952px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 630px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 364px;
+  }
 `;
 const Wrapper = styled.div`
   margin: 0 auto;
   padding: 37px 0 0 0;
   display: flex;
-  gap: 150px;
+  justify-content: space-between;
   font-size: 14px;
   line-height: 1.5;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    line-height: 0.5;
+  }
 `;
 
 const Title = styled.div`
@@ -114,9 +130,21 @@ const BottomSection = styled.div`
 `;
 const TagBox = styled.div`
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   color: #888;
   font-size: 12px;
+  & div {
+    margin: 0 5px;
+  }
+  @media screen and (max-width: 1440px) {
+    font-size: 11px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 9px;
+  }
 `;
 const TagContent = styled.div`
   color: #000;
@@ -142,4 +170,17 @@ const LinkBtn = styled.div`
   font-weight: 400;
   color: #000;
   line-height: 18px;
+  @media screen and (max-width: 768px) {
+    width: 5px;
+    height: 5px;
+    justify-content: center;
+    line-height: 0;
+    padding: 10px 10px;
+    div:nth-child(1) {
+      display: none;
+    }
+    div:nth-child(2) {
+      font-size: 20px;
+    }
+  }
 `;
