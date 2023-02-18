@@ -4,9 +4,8 @@
 
 ### **🛠️ Stacks**
 
-<div >
-[🔗 페이지 이동하기](https://kakao-tau.vercel.app/)
-</div>
+## 🔗[페이지 이동하기](https://kakao-tau.vercel.app/)
+
 <br>
 <div>
 <img src="https://img.shields.io/badge/html-1572B6?style=for-the-badge&logo=html5&logoColor=white"> 
