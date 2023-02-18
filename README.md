@@ -2,9 +2,7 @@
 
 ## _Kakao Clone Coding_
 
-## 🔗[페이지 이동하기](https://kakao-tau.vercel.app/)
-
-<br>
+### 🔗[페이지 이동하기](https://kakao-tau.vercel.app/)
 
 ### **🛠️ Stacks**
 
