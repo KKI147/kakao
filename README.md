@@ -4,8 +4,8 @@
 
 ### **🛠️ Stacks**
 
-<div onclick>
-<link ='https://kakao-tau.vercel.app/'><a>이동하기 🔗</a></link>
+<div >
+[🔗 페이지 이동하기](https://kakao-tau.vercel.app/)
 </div>
 <br>
 <div>
