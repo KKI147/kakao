@@ -26,7 +26,7 @@ export default function LeftSection() {
                 height: "14px",
                 alignItems: "center",
                 filter: "invert(100%)",
-                padding: "4px 0",
+                padding: "5px 0",
               }}
             />
           </BtnBox>
@@ -66,6 +66,9 @@ const Box = styled.div`
   background-color: #fae100;
   background-image: url(/img/bg_service.png);
   background-size: 160px 160px;
+  @media screen and (max-width: 768px) {
+    height: 460px;
+  }
 `;
 
 const Title = styled.div`
@@ -89,7 +92,7 @@ const Btn = styled.div`
   padding: 9px 20px 0;
   border-radius: 42px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 25px;
   color: #fff;
   background-color: #000;
   vertical-align: top;

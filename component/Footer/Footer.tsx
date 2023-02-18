@@ -143,7 +143,11 @@ const TagBox = styled.div`
     font-size: 10px;
   }
   @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
     font-size: 9px;
+    & div {
+      margin: 5px 10px;
+    }
   }
 `;
 const TagContent = styled.div`

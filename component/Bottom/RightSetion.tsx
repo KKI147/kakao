@@ -67,6 +67,9 @@ const Box = styled.div`
   background-color: #3c64ff;
   background-image: url(/img/bg_recruit.png);
   background-size: 309px 160px;
+  @media screen and (max-width: 768px) {
+    height: 460px;
+  }
 `;
 
 const Title = styled.div`
@@ -90,7 +93,7 @@ const Btn = styled.div`
   padding: 9px 20px 0;
   border-radius: 42px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 25px;
   color: #fff;
   background-color: #000;
   vertical-align: top;
