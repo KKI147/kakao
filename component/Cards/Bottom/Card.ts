@@ -80,7 +80,8 @@ export const ContentBox = styled.div`
           line-height: 1.5;
           gap: 20px;
         `;
-        sdefault: break;
+      default:
+        break;
     }
   }}
 `;

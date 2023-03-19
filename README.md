@@ -1,6 +1,6 @@
-# Developer
+# Kakao Clone Coding
 
-## _Kakao Clone Coding_
+## 카카오 페이지의 Card Component 반응형 CSS 학습을 위한 클론코딩
 
 ### 🔗[페이지 이동하기](https://kakao-tau.vercel.app/)
 
@@ -19,5 +19,7 @@
 
 ### **❗ Features**
 
-- React Portal & Modal
-- Media query Css
+<div>‣ 작년에 새로 배포된 Next.js v13 사용 및 SSR 서비스 학습</div>
+<div>‣ 각 화면 width에 따른 반응형 CSS 개발</div>
+<div>‣ Component Props Type, Interface 학습 및 적용</div>
+<div>‣ Next Image 기능을 활용해서 불필요한 이미지들의 lazy loading 자동화를 통한 성능 향상을 달성</div>
