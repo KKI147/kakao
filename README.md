@@ -17,6 +17,7 @@
  <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
  </div>
 
+<br>
 ### **❗ Features**
 
 <div>‣ 작년에 새로 배포된 Next.js v13 사용 및 SSR 서비스 학습</div>
