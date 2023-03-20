@@ -6,7 +6,6 @@
  <li>Kakao Hompage의 레이아웃을 HTML, CSS만으로 초기 레이아웃 설계</li>
   <li>설계 레이아웃 구현</li>
    <li>이외의 애니메이션이나 Modal등 MVP 구현</li>
-    
  </ul>
 
 
