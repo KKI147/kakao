@@ -1,9 +1,7 @@
 # Kakao Clone Coding
 
 ## 카카오 페이지의 Card Component 반응형 CSS 학습을 위한 클론코딩
-<div>
 내용
-</div>
 
 ### 🔗[페이지 이동하기](https://kakao-tau.vercel.app/)
 
