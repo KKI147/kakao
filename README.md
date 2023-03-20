@@ -2,13 +2,17 @@
 일반 사용자들에게 인지된 프로젝트를 HTML,CSS 만을 이용한 클론코딩
 
 ## 목표
-1. Kakao Hompage의 레이아웃을 HTML, CSS만으로 초기 레이아웃 설계
-2. 설계 레이아웃 구현
-3. 이외의 애니메이션이나 Modal등 MVP 구현
+<ul>
+ <li>Kakao Hompage의 레이아웃을 HTML, CSS만으로 초기 레이아웃 설계
+  <li>설계 레이아웃 구현
+   <li>이외의 애니메이션이나 Modal등 MVP 구현
+    
+ </ul>
+
 
 ## 🔗[페이지 이동하기](https://kakao-tau.vercel.app/)
 
-## **🛠️ Stacks**
+## **🛠️ 스택**
 <div>
 <img src="https://img.shields.io/badge/html-1572B6?style=for-the-badge&logo=html5&logoColor=white"> 
 <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
@@ -20,7 +24,7 @@
  <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
 </div>
 
-## **❗ Features**
+## **❗ 문제상황 & 해결**
 <div>‣ 작년에 새로 배포된 Next.js v13 사용 및 SSR 서비스 학습</div>
 <div>‣ 각 화면 width에 따른 반응형 CSS 개발</div>
 <div>‣ Component Props Type, Interface 학습 및 적용</div>
